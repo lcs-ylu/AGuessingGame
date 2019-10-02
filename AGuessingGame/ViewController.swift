@@ -57,10 +57,26 @@ class ViewController: UIViewController {
         // Give the appropriatefeedback to the user
         if guessNumber > targetNumber {
             print("Guess lower next time")
+            let synthesizer = AVSpeechSynthesizer()
+            let message = ("Guess lower next time")
+            let utterance = AVSpeechUtterance(string: message)
+            synthesizer.speak(utterance)
+            
+            
         } else if guessNumber < targetNumber {
             print("Guess higher next time")
+            let synthesizer = AVSpeechSynthesizer()
+            let message = ("Guess higher next time")
+            let utterance = AVSpeechUtterance(string: message)
+            synthesizer.speak(utterance)
+            
         } else {
             print("You are correct!")
+            let synthesizer = AVSpeechSynthesizer()
+            let message = ("You are correct!")
+            let utterance = AVSpeechUtterance(string: message)
+            synthesizer.speak(utterance)
+            
         
         }
         
